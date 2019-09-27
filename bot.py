@@ -6,14 +6,14 @@ import asyncio
 import requests
 import random
 
-bot = commands.Bot(commands.when_mentioned_or('='))
+bot = commands.Bot(commands.when_mentioned_or('/'))
 bot.remove_command(name="help")
 
 
 @bot.event
 async def on_ready():
-    print("PoDeTer a la pêche")
-    await bot.change_presence(activity=discord.Game(name="V1 | =help"))
+    print("ready dude")
+    await bot.change_presence(activity=discord.Game(name="V1 | /help"))
 
 
 @bot.command(pass_context=True)
